@@ -29,27 +29,64 @@ public class PreludeInCMajor
 //        player.play("L8 C2 E3+E4");
 //        generateNote1();
 //        spring();
-        generatePattern1();
-    }
-    
-    public static void generatePattern1()
-    {
-        String bar1 = "";
-        bar1 += "V0 Ri Ri Ci Ei+Gi Ci Ai ";
-        bar1 += "V1 E3i B3i+C4i A4i Ri Ri D4i ";
-        
-        String bar2 = "";
-        bar2 += "V0 Rq Di Fi+Gi Di Ai ";
-        bar2 += "V1 D3i B3i+C4i B4i Rq D4i ";
-        
-        String bar3 = bar1;
-        
-        String bar4 = "";
-        bar4 += "V0 ";
-        bar4 += "V1 G3i E4i+";
-        
-        String musicString = bar1 + bar2;
+        String musicString = "";
+        musicString += generateFirstLine();
+        musicString += generateSecondLine();
         player.play(musicString);
+    }
+    public static String generateThirdLine()
+    {
+        String bar14    = "";
+               bar14   += "";
+        String musicString = bar14;
+        return musicString;
+    }
+    public static String generateSecondLine()
+    {
+        String bar7     = "V0 Ri* Ei* Gi* Bi*+E6i* Gi* Di*+D6i* ";
+               bar7    += "V1 G3i* F4i* B4i* Ri* Ri* Ri* ";
+               
+        String bar8     = "V0 Ri* Ri* Di* Fi*+Bi* Di* Ai* ";
+               bar8    += "V1 G2i* G3i*+B4i* F4i* Ri* Ri* A4i* ";
+               
+        String bar9     = "V0 Ri* Ri* Ci* Ei*+Gi* Ci* Ai* ";
+               bar9    += "V1 C3i* G3i*+G4i* E4i* Ri* Ri* A4i* ";
+               
+        String bar10    = "V0 Ri* Ri* Di* Fi*+Gi* Di* Ai* ";
+               bar10   += "V1 D3i* G3i*+G4i* F4i* Ri* Ri* A4i* ";
+               
+        String bar11    = bar9;
+        
+        String bar12    = "V0 Ri* Ri* Ei* Gi*+Bi* Ei* C6i* ";
+               bar12   += "V1 E3i* C4i*+B4i* G4i* Ri* Ri* Ci* ";
+               
+        String bar13    = "V0 Ri* Ci* Fi* Ai*+C6i* Fi* Di*+D6i* ";
+               bar13   += "V1 F3i* C4i* A4i* Ri* Ri* Ri* ";
+               
+        String musicString = bar7 + bar8 + bar9 + bar10 + bar11 + bar12 + bar13;
+        return musicString;
+    }
+    public static String generateFirstLine()
+    {
+        String bar1     = "V0 Ri* Ri* Ci* Ei*+Gi* Ci* Ai* ";
+               bar1    += "V1 C3i* G3i*+G4i* E3i* Ri* Ri* A4i* ";
+        
+        String bar2     = "V0 Ri Ri Di Fi+Gi Di Ai ";
+               bar2    += "V1 B2i G3i+G4i F4i Ri Ri A4i ";
+        
+        String bar3     = bar1;
+        
+        String bar4     = "V0 Ri Ri Ci Gi+Bi Ei C6i ";
+               bar4    += "V1 E3i C4i+B4i G4i Ri Ri Ci ";
+        
+        String bar5     = "V0 Ri* Ei* Ai* C6i*+E6i* Ai* Di* D6i* ";
+               bar5    += "V1 F3i* C4i* A4i* Ri* Ri* Ri* ";
+        
+        String bar6     = "V0 Ri* Ei* Ai* C6i*+E6i* Ai* Di*+D6i* ";
+               bar6    += "V1 F3i* D4i* Ci* Ri* Ri* Ri* ";
+        
+        String musicString = bar1 + bar2 + bar3 + bar4 + bar5 + bar6;
+        return musicString;
     }
     
     public static void spring()
