@@ -36,8 +36,8 @@ public class PreludeInCMajor
     }
     public static String generateThirdLine()
     {
-        String bar14    = "";
-               bar14   += "";
+        String bar14    = "V0 Ri* Di* Gi* C6i*+D ";
+               bar14   += "V1 G3i* C4i* B4i* Ri* Ri* Ri* ";
         String musicString = bar14;
         return musicString;
     }
