@@ -1,15 +1,34 @@
-import org.jfugue.*;
-
 /**
- *
+ * This program will generate my own Black MIDI sequence and save it to MIDI
+ * file.
+ * 
  * @author Dell
  */
+
+import org.jfugue.*;
+
 public class StevenLiaoBlackMIDI
 {
     static Player player = new Player();
     public static void main(String[] args)
     {
+        String voice1 = "V0 ", voice2 = "V1 ", voice3 = "V2 ", voice4 = "V3 ", 
+               voice5 = "V4 ", voice6 = "V5 ", voice7 = "V6 ", voice8 = "V7 ";
+        voice1 += generateString1();
         
+        String musicString = voice1 + voice2 + voice3 + voice4+
+                             voice5 + voice6 + voice7 + voice8;
+        
+        player.play(musicString);
+//        spring();
+    }
+    
+    public static String generateString1()    
+    {
+        String musicString = "I112 ";
+        musicString += "C D E F G A B C6 C6 B A G F E D C ";
+        
+        return musicString;
     }
     
     public static void spring()

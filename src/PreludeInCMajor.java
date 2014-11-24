@@ -6,6 +6,8 @@
  */
 
 import org.jfugue.*;
+import java.io.File;
+import java.io.IOException;
 
 public class PreludeInCMajor 
 {
@@ -18,7 +20,17 @@ public class PreludeInCMajor
         musicString += generateThirdLine();
         musicString += generateFourthLine();
         musicString += generateFifthLine();
-        player.play(musicString);
+        try
+        {
+            player.saveMidi(musicString, new File("PreludeInCMajor.mid"));
+            player.play(musicString);
+        } catch (IOException ie)
+        {
+            System.err.println("ERROR SAVING");
+        } finally
+        {
+            
+        }
     }
     
     public static String generateFifthLine()
