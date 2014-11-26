@@ -22,14 +22,11 @@ public class PreludeInCMajor
         musicString += generateFifthLine();
         try
         {
-            player.saveMidi(musicString, new File("PreludeInCMajor.mid"));
-            player.play(musicString);
+            player.saveMidi(musicString, new File("PreludeInCMajor.midi"));
+//            player.play(musicString);
         } catch (IOException ie)
         {
             System.err.println("ERROR SAVING");
-        } finally
-        {
-            
         }
     }
     
